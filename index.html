@@ -31,6 +31,30 @@
         <label for="FirstName">First Name</label><br>
         <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required autofocus>
       </div>
+     <div>
+        <label for="Last Name">Last Name</label><br>
+        <input type="text" name="Last_Name" id="LastName" placeholder="Last Name" required autofocus>
+      </div>
+     <div>
+        <label for="Email">Email</label><br>
+        <input type="text" name="Email" id="Email" placeholder="Email" required autofocus>
+      </div>
+     <div>
+        <label for="Address">Address</label><br>
+        <input type="text" name="Address" id="Address" placeholder="Address" required autofocus>
+      </div>
+     <div>
+        <label for="City">City</label><br>
+        <input type="text" name="City" id="City" placeholder="City" required autofocus>
+      </div>
+     <div>
+        <label for="State">State</label><br>
+        <input type="text" name="State" id="State" placeholder="State" required autofocus>
+      </div>
+     <div>
+        <label for="Postal Code">Postal Code</label><br>
+        <input type="text" name="Postal_Code" id="PostalCode" placeholder="Postal Code" required autofocus>
+     </div>
       <div>
         <input type="submit">
       </div>
@@ -62,6 +86,30 @@
       myOutput += `</div>`;
       document.querySelector("#output").innerHTML = myOutput;
     }
+
+   var formfield = document.getElementById('formfield');
+
+   function add(){
+    var newField = document.createElement('input');
+    newField.setAttribute('type','text');
+    newField.setAttribute('First Name','text');
+    newField.setAttribute('Last Name','text');
+    newField.setAttribute('Email','text');
+    newField.setAttribute('Address','text');
+    newField.setAttribute('City','text');
+    newField.setAttribute('State','text');
+    newField.setAttribute('Postal Code','text');
+    newField.setAttribute('siz',50);
+    newField.setAttribute('placeholder','Optional Field');
+    formfield.appendChild(newField);
+   }
+
+   function remove(){
+    var input_tags = formfield.getElementsByTagName('input');
+    if(input_tags.length > 2) {
+     formfield.removeChild(input_tags[(input_tags.length) - 1]);
+    }
+   }
   </script>  
  </body>
 </html>
